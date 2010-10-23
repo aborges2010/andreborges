@@ -1,0 +1,38 @@
+package ia.aborges.login.web.action;
+
+import ia.aborges.login.struts.LoginForm;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.actions.DispatchAction;
+
+public class LoginAction extends DispatchAction {
+
+	public ActionForward newLogin(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+
+		init();
+
+		return mapping.findForward("depois");
+	}
+	
+	public ActionForward verifyUser(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response){
+		
+		
+		return mapping.findForward("depois2");
+	}
+
+	public void init() {
+
+		LoginForm loginForm = new LoginForm();
+
+		loginForm.setLoginEmail("");
+	}
+
+}

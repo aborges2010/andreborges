@@ -1,0 +1,15 @@
+
+package ia.aborges.login.web.action;
+
+import org.apache.struts.action.ActionForward;
+
+
+public class LoginAction extends DispathAction {
+	
+	public ActionForward newLogin(){
+		
+	}
+	
+	
+	
+}

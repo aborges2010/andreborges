@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="com.adobe.flexbuilder.editors.common.last.server.type" value="0"/>
+	<item key="com.adobe.flexbuilder.editors.common.use.default.location" value="true"/>
+	<item key="com.adobe.flexbuilder.editors.common.last.usewtp" value="false"/>
+	<item key="com.adobe.flexbuilder.editors.common.last.java.uselcds" value="true"/>
+	<item key="com.adobe.flexbuilder.editors.common.last.useremoteobject" value="true"/>
+	<item key="com.adobe.flexbuilder.editors.common.last.apptype" value="true"/>
+	<section name="com.adobe.flexbuilder.editors.common.ui.pi.PropertiesView">
+		<item key="Style" value="true"/>
+		<item key="ViewOption" value="1"/>
+		<item key="Common" value="true"/>
+		<item key="Layout" value="true"/>
+	</section>
+	<section name="ExportWizard">
+	</section>
+</section>

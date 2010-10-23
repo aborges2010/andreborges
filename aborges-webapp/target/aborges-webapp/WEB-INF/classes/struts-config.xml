@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="trxForm" type="expertus.mgps.tpa.security.struts.TrxForm"/>
+	</form-beans>
+	<global-forwards>
+		<forward name="common.general.error" path="/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+
+		<action path="/login" 
+				name="loginForm" 
+				scope="session" 
+				validate="false" 
+				type="ia.aborges.login.web.action.LoginAction" 
+				parameter="method" 
+				input="/error.jsp" >
+			<forward name="loginSuccess" path="/fillIn.jsp" />
+			<forward name="loginNotSuccess" path="/error.jsp" />
+		</action>		
+
+	</action-mappings>
+	<message-resources parameter="applicationResources_aborges_war_fr.properties" null="false" />
+</struts-config>

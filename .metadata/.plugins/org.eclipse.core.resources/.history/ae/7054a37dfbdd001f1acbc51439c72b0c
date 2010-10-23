@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID">
+    <filter>
+        <filter-name>LoginSessionFilter</filter-name>
+        <filter-class>expertus.mgps.core.security.utils.LoginSessionFilter</filter-class>
+        <init-param>
+            <param-name>badSession</param-name>
+            <param-value>/badSession.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>multiSession</param-name>
+            <param-value>/errorMultiSession.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>timeout</param-name>
+            <param-value>/badSession.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>exclusionsFile</param-name>
+            <param-value>/WEB-INF/loginSessionFilterExclusions.list</param-value>
+        </init-param>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>LoginSessionFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>LoginSessionFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+	
+    <filter-mapping>
+        <filter-name>StrutsLayoutFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>StrutsLayoutFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<!-- Resources bundle base class -->
+        <init-param>
+            <param-name>application</param-name>
+            <param-value>ApplicationResources_MGPS</param-value>
+        </init-param>
+		<!-- Resources bundle base class -->
+        <init-param>
+            <param-name>nocache</param-name>
+            <param-value>true</param-value>
+        </init-param>
+		<!--
+			Context-relative path to the XML resource containing Struts
+			configuration information
+		-->
+        <init-param>
+			<!-- Config file for Payment-->
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+		<!--
+			The debugging detail level for this servlet, which controls how much
+			information is logged.
+		-->
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>detail</param-name>
+            <param-value>2</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/error503administration.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404administration.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error500administration.jsp</location>
+    </error-page>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    <jsp-config>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-expertus.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-expertus.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-layout.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-layout.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-layout-expertus.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-layout-expertus.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-nested.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-nested.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-template.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-template.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>
+            <taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+    
+    <ejb-local-ref>
+        <ejb-ref-name>ejb/CorrespondentManagerBean</ejb-ref-name>
+        <local>expertus.mgps.correspondent.CorrespondentManager</local>
+        <ejb-link>mgps-correspondent-ejb-2.0.0-SNAPSHOT-weblogic.jar#CorrespondentManagerBean</ejb-link>
+    </ejb-local-ref>    
+    <ejb-local-ref>
+        <ejb-ref-name>ejb/TPAFlowFacadeBean</ejb-ref-name>
+        <local>expertus.mgps.tpa.flow.TPAFlowFacade</local>
+        <ejb-link>expertus-mgps-tpa-flow-1.0.0-SNAPSHOT.jar#TPAFlowFacadeBean</ejb-link>
+    </ejb-local-ref>
+    <ejb-local-ref>
+        <ejb-ref-name>ejb/RepositoryDao</ejb-ref-name>
+        <local>expertus.mgps.tpa.repos.SecureReposDao</local>
+        <ejb-link>mgps-tpa-repos-ejb-1.0.0-SNAPSHOT-weblogic.jar#RepositoryDao</ejb-link>
+    </ejb-local-ref>
+    <ejb-local-ref>
+        <ejb-ref-name>ejb/ReposModelLookupDAOBean</ejb-ref-name>        			  
+        <local>expertus.mgps.tpa.repos.ReposModelLookupDAO</local>
+        <ejb-link>mgps-tpa-repos-ejb-1.0.0-SNAPSHOT-weblogic.jar#ReposModelLookupDAOBean</ejb-link>
+    </ejb-local-ref>
+    <ejb-local-ref>
+        <ejb-ref-name>ejb/CurrencyFacadeBean</ejb-ref-name>        			  
+        <local>expertus.mgps.core.manager.CurrencyFacade</local>
+        <ejb-link>mgps-core-1.1.0-SNAPSHOT.jar#CurrencyFacadeBean</ejb-link>
+    </ejb-local-ref>
+</web-app>

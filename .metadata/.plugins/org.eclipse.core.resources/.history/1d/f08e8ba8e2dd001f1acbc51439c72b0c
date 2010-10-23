@@ -1,0 +1,20 @@
+package ia.aborges.login.struts.*;
+
+
+public class {
+	public LoginForm extends ActionForwars{
+		
+		
+		init();
+		
+		
+		
+	}
+	
+	public void init(){
+		
+		
+		
+	}
+}
+

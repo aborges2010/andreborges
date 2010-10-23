@@ -1,0 +1,137 @@
+#Title de l'application
+title.app=Monetis Global Payment Solution
+
+#Errors
+errors.header=<h3><font color="red">Erreurs de validation</font></h3><b>Vous devez corriger le(s) erreur(s):</b><br><br>
+erro.global.champ.requis= "{0}"<br />
+errors.prefix=<li>
+errors.suffix=</li></ul>
+errors.suffix=</ul>	
+
+#---------------------------------------------------------------------------------------------------Errors --#
+erro.global.user=User<br />
+common.general.error=Error
+
+#------------------------------------------------------------------------------------------------- general --#
+
+image.banner.eni=/tpasouza/images/eni_banner.gif
+
+#---------------------------------------------------------------------------------------------------- menu --#
+prompt.menuOpt01=Messages
+prompt.menuOpt02=Option-02
+prompt.menuOpt03=Option-03
+prompt.menuOpt04=Option-04
+prompt.menuOpt05=Option-05
+prompt.barMenu= | 
+
+#------------------------------------------------------------------------------ transactionInformation.jsp --#
+
+prompt.batchID=Batch ID
+prompt.clearingChannels=Clearing Channel
+prompt.confirm=Confirm
+prompt.creator=Creator
+prompt.currencyOfTransfer=Currency of Transfer
+transaction.paymentInstruction.transactionInformation.currencyOfTransfer.CAD=CAD
+prompt.direction=Direction
+transaction.paymentInstruction.transactionInformationType.direction.OUT=Out
+transaction.paymentInstruction.transactionInformationType.direction.IN=In
+prompt.endToEndID=End to End ID
+prompt.instructedAmount=Instructed Amount
+prompt.instructionID=Instruction ID
+prompt.requestedExecutionDate=Requested Execution Date
+prompt.receiver=Receiver
+prompt.settlementTypes=Settlement Types
+transaction.paymentInstruction.transactionInformation.settlementTypes.BOOK=BOOK
+transaction.paymentInstruction.transactionInformation.settlementTypes.MPNS=MPNS
+transaction.paymentInstruction.transactionInformation.settlementTypes.RTGS=RTGS
+transaction.paymentInstruction.transactionInformation.settlementTypes.RTNS=RTNS
+transaction.paymentInstruction.transactionInformation.clearingChannelType.MT-103=MT-103 
+transaction.paymentInstruction.transactionInformation.clearingChannelType.MT-200=MT-200
+transaction.paymentInstruction.transactionInformation.clearingChannelType.MT-202=MT-202
+prompt.state=State
+prompt.title01=Transaction Information
+prompt.transactionID=Transaction ID
+prompt.btBack=Back
+prompt.btAdd=Submit
+
+
+
+#--Legacy
+common.action.back=Back
+common.action.submit=Submit
+common.action.cancel=Cancel
+
+#----------------------------------------------------------------------------------------------- debit.jsp --#
+
+prompt.accountTypes=Account Type
+prompt.debitDateTime=Debit Date and Time
+prompt.debtor=Debtor
+prompt.debtorAccount=Debtor Account
+prompt.debtorAgent=Debtor Agent
+prompt.debtorAgentAccount=Debtor Agent Account
+prompt.title02=Debit
+prompt.ultimateDebtor=Ultimate Debtor
+prompt.PartySelector=Party Selector
+prompt.MenuDetails=Details
+prompt.MenuHistory=History
+prompt.MenuRelatedItem=RelatedItem
+
+#---------------------------------------------------------------------------------------------- credit.jsp --#
+
+#prompt.accountTypes=Account Type
+prompt.creditDateTime=Credit Date and Time
+prompt.creditor=Creditor
+prompt.creditorAccount=Creditor Account
+transaction.paymentInstruction.creditor.accountType.IBAN=IBAN
+transaction.paymentInstruction.creditor.accountType.BBAN=BBAN
+transaction.paymentInstruction.creditor.accountType.UPIC=UPIC
+transaction.paymentInstruction.creditor.accountType.PROP=PROP
+prompt.creditorAgent=Creditor Agent
+prompt.creditorAgentAccount=Creditor Agent Account
+prompt.title03=Credit
+prompt.ultimateCreditor=Ultimate Creditor
+
+#--------------------------------------------------------------------------------- reimbursementAgents.jsp --#
+
+#prompt.accountTypes=Account Type
+prompt.instructingReimbursementAgent=Instructing Reimbursement Agent
+prompt.instructingReimbursementAgentAccount=Instructing Reimbursement Agent Account
+prompt.instructedReimbursementAgent=Instructed Reimbursement Agent
+prompt.instructedReimbursementAgentAccount=Instructed Reimbursement Agent Account
+prompt.title04=Reimbursement Agents
+
+#-------------------------------------------------------------------------------- paymentsInstructions.jsp --#
+
+prompt.title05=Payment's Instructions
+prompt.instructionForCreditorAgentCode=Instruction for Creditor Agent Code
+prompt.instructionForCreditorAgent=Instruction for Creditor Agent
+prompt.instructionForDebtorAgent=Instruction for Debtor Agent
+prompt.purpose=Purpose
+transaction.paymentInstruction.PaymentsInstructions.purpose.PURPOSE=purpose
+transaction.paymentInstruction.transactionInformation.instructionForCreditorAgentCode.CHQB=Paid by chèque.
+transaction.paymentInstruction.transactionInformation.instructionForCreditorAgentCode.HOLD=Amount of money must be held. Pay on identification.
+transaction.paymentInstruction.transactionInformation.instructionForCreditorAgentCode.PHOB=Advise/contact by phone. 
+transaction.paymentInstruction.transactionInformation.instructionForCreditorAgentCode.TELB=Advise/contact by the most efficient means of telecommunication.
+
+#--------------------------------------------------------------------------------------------- charges.jsp --#
+
+prompt.title06=Charges
+prompt.chargeAccount=Charge Account
+prompt.chargeBearer=Charge Bearer
+transaction.paymentInstruction.charge.chargeBearer.CRED=All transaction charges are to be borne by the creditor.
+transaction.paymentInstruction.charge.chargeBearer.DEBT=All transaction charges are to be borne by the debtor.
+transaction.paymentInstruction.charge.chargeBearer.SHAR=The transaction charges are to be shared by the creditor and the debtor.
+transaction.paymentInstruction.charge.chargeBearer.SLEV=Charges are to be applied following the rules agreed in the service level and/or scheme.
+						
+#-------------------------------------------------------------------------------------------- exchange.jsp --#
+
+prompt.title07=Exchange
+prompt.exchangeRate=Exchange Rate
+prompt.contractIdentification=Contract Identification
+
+#------------------------------------------------------------------------------------------------ temp.jsp --#
+
+crud01=Nome
+SubNome1=SubNome1
+SubNome2=SubNome2
+prompt.testForm=Test Form

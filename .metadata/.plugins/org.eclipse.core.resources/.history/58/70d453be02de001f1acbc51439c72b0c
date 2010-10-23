@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="trxForm" type="expertus.mgps.tpa.security.struts.TrxForm"/>
+	</form-beans>
+	<global-forwards>
+		<forward name="common.general.error" path="/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+
+		<action path="/manageTrx" 
+				name="trxForm" 
+				scope="session" 
+				validate="false" 
+				type="expertus.mgps.tpa.web.action.TrxAction" 
+				parameter="cmd" 
+				input="/error.jsp" >
+			<forward name="newTrxSuccess" path="/layoutPayment.jsp" />
+			<forward name="createTrxSuccess" path="/submitTest.jsp" />
+		</action>		
+
+	</action-mappings>
+	<message-resources parameter="ApplicationResources_mgps_tpa_war_fr" null="false" />
+</struts-config>

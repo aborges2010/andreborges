@@ -1,0 +1,28 @@
+package ia.aborges.login.struts;
+
+import java.io.Serializable;
+
+import org.apache.struts.action.ActionForward;
+
+/*
+*
+* @author: André Souza
+*
+*/
+
+
+public class LoginForm extends ActionForward implements Serializable{
+
+	private String login;
+	static final long serialVersionUID = 3214560987L;
+	
+	
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getLogin() {
+		return login;
+	}
+	
+}
+

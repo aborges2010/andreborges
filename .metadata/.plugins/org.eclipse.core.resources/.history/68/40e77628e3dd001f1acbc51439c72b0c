@@ -1,0 +1,22 @@
+package ia.aborges.login.struts;
+
+import org.apache.struts.action.ActionForward;
+
+
+public class LoginForm{
+	public ActionForward LoginForm extends DispathAction{
+		
+		
+		init();
+		
+		
+		
+	}
+	
+	public void init(){
+		
+		
+		
+	}
+}
+

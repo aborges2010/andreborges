@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="trxForm" type="expertus.mgps.tpa.security.struts.TrxForm"/>
+	</form-beans>
+	
+	<global-exceptions>
+		<exception scope="request"
+			handler="expertus.mgps.core.util.struts.MGPSExceptionHandler" type="java.lang.Exception"
+			path="/error.jsp" key="common.general.error" />
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="logout" path="/userSession.do?cmd=logout" />
+		<forward name="badsession" path="/badSession.jsp" />
+		<forward name="accessdenied" path="/accessDenied.jsp" />
+		<forward name="multisession" path="/errorMultiSession.jsp" />
+		<forward name="timeout" path="/badSession.jsp" />
+		<forward name="userRelated" path="/badSession.jsp" />
+		<forward name="login" path="/login.jsp" />
+		<forward name="userindex" path="tiles.user.index" redirect="true" />
+		<forward name="common.general.error" path="/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+		<!-- struts-layout actions -->
+
+		<action path="/treeview"
+			type="fr.improve.struts.taglib.layout.treeview.TreeviewAction" scope="request"
+			validate="false">
+		</action>
+		
+		<action path="/sort" type="fr.improve.struts.taglib.layout.sort.SortAction"
+			scope="request" validate="false">
+		</action>
+
+		<action path="/userSession" 
+				type="expertus.mgps.core.util.struts.MonetisSessionAction"
+				name="monetisSessionForm" 
+				scope="request" 
+				validate="false"
+				input="/userHeader.jsp" 
+				parameter="cmd">
+			<forward name="headerFrame" path="/userHeader.jsp" />
+			<forward name="viewUserList" path="/userLoggedInMonetis.jsp" />
+			<forward name="viewChangeUserPassword" path="/viewChangeUserPassword.do" />
+			<forward name="viewChangeUserPasswordNullWithFrame" path="/viewChangeUserPasswordNullWithFrame.do" />
+			<forward name="viewChangeUserPasswordExpiredWithFrame" path="/viewChangeUserPasswordExpiredWithFrame.do" />
+			<forward name="authenticatedLoginSuccess" path="/rtwa/viewBulletin.do?cmd=view&amp;menuNodeId=5.1" redirect="true" />
+		</action>
+		
+		<!-- BusinessEventViewer actions-->
+		<action path="/businessEventViewer"
+				type="expertus.mgps.core.util.struts.BusinessEventViewerAction" 
+				name="businessEventViewerForm"
+				scope="session" 
+				validate="false" 
+				parameter="cmd">
+			<forward name="samePage" path="/businessEventViewer.jsp" />
+		</action>
+		
+		<!--  Manage password expiration/password change -->
+		<action path="/viewChangeUserPasswordExpiredWithFrame" type="expertus.mgps.core.security.struts.ExpiredPasswordAction"
+			name="userPasswordExpiredForm" scope="session" validate="false"
+			input="/login.jsp" parameter="cmd">
+			<forward name="changeUserPassword" path="/changeUserPasswordExpiredWithFrame.jsp" />
+			<forward name="passwordChanged" path="/login.jsp" />
+		</action>
+		
+		<action path="/changeUserPasswordExpiredWithFrame" type="expertus.mgps.core.security.struts.ExpiredPasswordAction"
+			name="userPasswordExpiredForm" scope="session" validate="true"
+			input="/changeUserPasswordExpiredWithFrame.jsp" parameter="cmd">
+			<forward name="passwordChanged" path="/login.jsp" />
+		</action>
+		<action path="/viewChangeUserPassword" forward="/changeUserPasswordWithFrame.jsp" />
+		<action path="/initChangeUserPassword" type="expertus.mgps.core.security.struts.ExpiredPasswordAction"
+			name="userPasswordForm" scope="session" validate="false" parameter="cmd">
+			<forward name="viewChangeUserPassword" path="/viewChangeUserPassword.do" />
+		</action>
+		<action path="/changeUserPasswordWithFrame" type="expertus.mgps.core.security.struts.ExpiredPasswordAction"
+			name="userPasswordForm" scope="session" validate="true"
+			input="/changeUserPasswordWithFrame.jsp" parameter="cmd">
+			<forward name="passwordChanged" path="/login.jsp" />
+		</action>
+		<action path="/viewChangeUserPasswordNullWithFrame" type="expertus.mgps.core.security.struts.ExpiredPasswordAction"
+			name="userPasswordNullForm" scope="session" validate="false"
+			input="/login.jsp" parameter="cmd">
+			<forward name="changeUserPassword" path="/changeUserPasswordNullWithFrame.jsp" />
+			<forward name="passwordChanged" path="/login.jsp" />
+		</action>
+		<action path="/changeUserPasswordNullWithFrame" type="expertus.mgps.core.security.struts.ExpiredPasswordAction"
+			name="userPasswordNullForm" scope="session" validate="true"
+			input="/changeUserPasswordNullWithFrame.jsp" parameter="cmd">
+			<forward name="passwordChanged" path="/login.jsp" />
+		</action>
+
+		<action path="/manageTrx" 
+				name="trxForm" 
+				scope="session" 
+				validate="false" 
+				type="expertus.mgps.tpa.web.action.TrxAction" 
+				parameter="cmd" 
+				input="/error.jsp" >
+			<forward name="newTrxSuccess" path="/layoutPayment.jsp" />
+			<forward name="createTrxSuccess" path="/submitTest.jsp" />
+		</action>		
+
+	</action-mappings>
+
+	<controller processorClass="fr.improve.struts.taglib.layout.workflow.LayoutRequestProcessor" />
+	<message-resources parameter="ApplicationResources_mgps_tpa_war_fr" null="false" />
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn"> 
+		<set-property property="pathnames" 
+		value="/WEB-INF/validator-expertus.xml, /WEB-INF/validator-rules.xml, /WEB-INF/validation.xml" />
+	</plug-in>
+	
+	<plug-in className="fr.improve.struts.taglib.layout.workflow.LayoutPlugin">
+		 	<set-property property="skinResources" value="Expertus-Layout"/>
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+		<!-- Set Module-awareness to true -->
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+</struts-config>

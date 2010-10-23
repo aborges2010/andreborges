@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+	<mx:ApplicationControlBar x="0" y="0" width="464" height="51">
+	</mx:ApplicationControlBar>
+	
+</mx:Application>
