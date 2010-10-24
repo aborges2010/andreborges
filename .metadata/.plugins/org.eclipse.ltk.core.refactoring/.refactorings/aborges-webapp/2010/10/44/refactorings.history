@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;aborges-webapp/src/main/java/ia/aborges/login/web/action/Ss.java&apos; to &apos;TestClient.java&apos;" description="Rename resource &apos;Ss.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/ia/aborges/login/web/action/Ss.java" name="TestClient.java" stamp="1287891900513" updateReferences="true"/>
+</session>

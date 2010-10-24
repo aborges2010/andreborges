@@ -44,6 +44,12 @@
 			<artifactId>glassfish-embedded-all</artifactId>
 			<version>3.0-b72</version>
 		</dependency>
+		<dependency>
+			<groupId>aborgesGroupId.aborgesArtifactId</groupId>
+			<artifactId>aborgesEJBModule1</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
