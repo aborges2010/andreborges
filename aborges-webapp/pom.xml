@@ -50,6 +50,30 @@
 			<version>1.0</version>
 			<type>ejb</type>
 		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-bean</artifactId>
+			<version>1.1</version>
+			<type>tld</type>
+		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-html</artifactId>
+			<version>1.1</version>
+			<type>tld</type>
+		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-nested</artifactId>
+			<version>1.1</version>
+			<type>tld</type>
+		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-logic</artifactId>
+			<version>1.1</version>
+			<type>tld</type>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>

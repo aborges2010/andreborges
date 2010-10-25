@@ -14,16 +14,16 @@
 
 	<action-mappings>
 
-		<action path="/login" 
-				name="loginForm" 
-				scope="session" 
-				validate="false" 
-				type="ia.aborges.login.web.action.LoginAction" 
-				parameter="method" 
+		<action path="/loginEmpty"
+				name="loginForm"
+				scope="session"
+				validate="false"
+				type="ia.aborges.login.web.action.LoginAction"
+				parameter="method"
 				input="/error.jsp" >
-			<forward name="loginSuccess" path="/fillIn.jsp" />
+			<forward name="newLoginSuccess" path="/login.jsp" />
 			<forward name="loginNotSuccess" path="/error.jsp" />
-		</action>		
+		</action>
 
 	</action-mappings>
 	<message-resources parameter="applicationResources_aborges_war_fr.properties" null="false" />

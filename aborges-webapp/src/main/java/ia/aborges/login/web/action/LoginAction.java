@@ -18,22 +18,23 @@ public class LoginAction extends DispatchAction {
 
 		init();
 
-		return mapping.findForward("depois");
+		return mapping.findForward("newLoginSuccess");
 	}
-	
+
 	public ActionForward verifyUser(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response){
-		
+
 		LoginForm loginForm = (LoginForm) form;
-		
+
 		if( !loginForm.getLoginEmail().isEmpty() ){
+			System.out.println("e-mail: " + loginForm.getLoginEmail());
 			/*if(checkPermission(loginForm.getLoginEmail())){
 				return mapping.findForward("depoi3");
 			}*/
 		}
-		
-		
-		
+
+
+
 		return mapping.findForward("depois2notOK");
 	}
 

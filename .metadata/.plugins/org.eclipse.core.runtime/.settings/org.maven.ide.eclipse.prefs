@@ -1,5 +1,6 @@
-#Fri Oct 22 12:07:20 EDT 2010
+#Sun Oct 24 14:42:57 EDT 2010
 forceRebuildOnUpgrade=true
 eclipse.m2.userSettingsFile=C\:\\Program Files\\Apache Software Foundation\\apache-maven-3.0\\conf\\settings.xml
 eclipse.preferences.version=1
 eclipse.m2.defaultRuntime=EMBEDDED
+eclipse.m2.disableJdkwarning=true
