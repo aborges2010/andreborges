@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='4684' time_ms='1288055814316'>
+<vm_version>
+<name>
+Java HotSpot(TM) Client VM
+</name>
+<release>
+14.2-b01
+</release>
+<info>
+Java HotSpot(TM) Client VM (14.2-b01) for windows-x86 JRE (1.6.0_16-b01), built on Jul 31 2009 11:26:58 by &quot;java_re&quot; with MS VC++ 7.1
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-XX:+UnlockDiagnosticVMOptions -XX:MaxPermSize=192m -XX:NewRatio=2 -XX:+LogVMOutput -XX:LogFile=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/logs/jvm.log -Xmx512m -javaagent:C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib/monitor/btrace-agent.jar=unsafe=true,noServer=true -Dosgi.shell.telnet.maxconn=1 -Djdbc.drivers=org.apache.derby.jdbc.ClientDriver -Dfelix.fileinstall.dir=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/autostart/ -Djavax.net.ssl.keyStore=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/keystore.jks -Dosgi.shell.telnet.port=6666 -Djava.security.policy=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/server.policy -Dfelix.fileinstall.poll=5000 -Dcom.sun.aas.instanceRoot=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1 -Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory -Dosgi.shell.telnet.ip=127.0.0.1 -Djava.endorsed.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/lib/endorsed -Dcom.sun.aas.installRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish -Djava.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/lib/ext -Dfelix.fileinstall.bundles.new.start=true -Djavax.net.ssl.trustStore=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/cacerts.jks -Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as -Djava.security.auth.login.config=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/login.conf -DANTLR_USE_DIRECT_CLASS_LOADING=true -Dfelix.fileinstall.debug=1 -Dorg.glassfish.web.rfc2109_cookie_names_enforced=false -Djava.library.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin/client;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin;C:/Program Files/Java/jdk1.6.0_20/bin;C:/Program Files/Druide/Antidote 7/Programmes32;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/%MAVEN_HOME%/bin 
+</args>
+<command>
+com.sun.enterprise.glassfish.bootstrap.ASMain -domainname domain1 -asadmin-args start-domain,,,--domaindir,,,C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92,,,--debug=false,,,--verbose=false,,,domain1 -instancename server -verbose false -debug false -asadmin-classpath C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/admin-cli.jar -asadmin-classname com.sun.enterprise.admin.cli.AsadminMain -upgrade false -domaindir C:/workspaceGlassfish/.metadata/.plugins/com.sun.enterprise.jst.server.sunappsrv92/domain1 -read-stdin true
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.version=1.0
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Sun Microsystems Inc.
+java.vm.version=14.2-b01
+java.vm.name=Java HotSpot(TM) Client VM
+java.vm.vendor=Sun Microsystems Inc.
+java.vm.info=mixed mode, sharing
+java.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/lib/ext
+java.endorsed.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/lib/endorsed
+sun.boot.library.path=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\bin
+java.library.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin/client;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin;C:/Program Files/Java/jdk1.6.0_20/bin;C:/Program Files/Druide/Antidote 7/Programmes32;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/%MAVEN_HOME%/bin
+java.home=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre
+java.class.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/glassfish.jar
+sun.boot.class.path=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed\javax.annotation.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed\jaxb-api-osgi.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed\webservices-api-osgi.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\lib\resources.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\lib\rt.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\lib\sunrsasign.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\lib\jsse.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\lib\jce.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\lib\charsets.jar;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\jre\classes
+osgi.shell.telnet.maxconn=1
+jdbc.drivers=org.apache.derby.jdbc.ClientDriver
+felix.fileinstall.dir=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/autostart/
+javax.net.ssl.keyStore=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/keystore.jks
+osgi.shell.telnet.port=6666
+java.security.policy=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/server.policy
+felix.fileinstall.poll=5000
+com.sun.aas.instanceRoot=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1
+com.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory
+osgi.shell.telnet.ip=127.0.0.1
+com.sun.aas.installRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish
+felix.fileinstall.bundles.new.start=true
+javax.net.ssl.trustStore=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/cacerts.jks
+com.sun.enterprise.security.httpsOutboundKeyAlias=s1as
+java.security.auth.login.config=C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92\domain1/config/login.conf
+ANTLR_USE_DIRECT_CLASS_LOADING=true
+felix.fileinstall.debug=1
+org.glassfish.web.rfc2109_cookie_names_enforced=false
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='2972'/>
+<dependency_failed type='unique_concrete_method' ctxk='java/util/Properties' x='java/util/Hashtable put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' witness='java/security/Provider' stamp='24.838'/>
+<dependency_failed type='leaf_type' ctxk='java/io/ByteArrayOutputStream' witness='com/sun/common/util/logging/LoggingOutputStream' stamp='28.920'/>
+<dependency_failed type='leaf_type' ctxk='org/jvnet/hk2/component/MultiMap' witness='org/glassfish/api/admin/ParameterMap' stamp='34.031'/>
+<writer thread='2348'/>
+<dependency_failed type='no_finalizable_subclasses' ctxk='java/io/FilterInputStream' witness='com/sun/enterprise/loader/ASURLClassLoader$SentinelInputStream' stamp='34.612'/>
+<dependency_failed type='unique_concrete_method' x='java/io/BufferedReader close ()V' witness='com/sun/grizzly/tcp/http11/GrizzlyReader' stamp='34.950'/>
+<dependency_failed type='unique_concrete_method' x='java/io/BufferedReader close ()V' witness='com/sun/grizzly/tcp/http11/GrizzlyReader' stamp='34.950'/>
+<dependency_failed type='unique_concrete_method' x='java/io/Reader read ([C)I' witness='com/sun/grizzly/tcp/http11/GrizzlyReader' stamp='34.950'/>
+<writer thread='2972'/>
+<dependency_failed type='leaf_type' ctxk='java/util/ArrayList' witness='com/sun/enterprise/config/serverbeans/Applications$Duck$1' stamp='35.512'/>
+<dependency_failed type='leaf_type' ctxk='java/util/ArrayList' witness='com/sun/enterprise/config/serverbeans/Applications$Duck$1' stamp='35.512'/>
+<dependency_failed type='unique_concrete_method' x='java/util/ArrayList add (Ljava/lang/Object;)Z' witness='javax/management/AttributeList' stamp='38.182'/>
+<writer thread='1868'/>
+<dependency_failed type='unique_concrete_method' x='java/io/ObjectOutputStream replaceObject (Ljava/lang/Object;)Ljava/lang/Object;' witness='sun/rmi/server/MarshalOutputStream' stamp='39.489'/>
+<writer thread='4240'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/apache/felix/moduleloader/IWire' x='org/apache/felix/framework/searchpolicy/R4Wire getCapability ()Lorg/apache/felix/moduleloader/ICapability;' witness='org/apache/felix/moduleloader/IWire' stamp='101.340'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/apache/felix/moduleloader/IWire' x='org/apache/felix/framework/searchpolicy/R4Wire hasPackage (Ljava/lang/String;)Z' witness='org/apache/felix/moduleloader/IWire' stamp='101.341'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/apache/felix/moduleloader/IWire' x='org/apache/felix/framework/searchpolicy/R4Wire getCapability ()Lorg/apache/felix/moduleloader/ICapability;' witness='org/apache/felix/moduleloader/IWire' stamp='101.341'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/apache/felix/moduleloader/IWire' x='org/apache/felix/framework/searchpolicy/R4Wire getCapability ()Lorg/apache/felix/moduleloader/ICapability;' witness='org/apache/felix/moduleloader/IWire' stamp='101.341'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/apache/felix/moduleloader/IWire' x='org/apache/felix/framework/searchpolicy/R4Wire getClass (Ljava/lang/String;)Ljava/lang/Class;' witness='org/apache/felix/moduleloader/IWire' stamp='101.341'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/apache/felix/moduleloader/IWire' x='org/apache/felix/framework/searchpolicy/R4Wire getRequirement ()Lorg/apache/felix/moduleloader/IRequirement;' witness='org/apache/felix/moduleloader/IWire' stamp='101.341'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/osgi/service/url/URLStreamHandlerService' x='org/osgi/service/url/AbstractURLStreamHandlerService toExternalForm (Ljava/net/URL;)Ljava/lang/String;' witness='org/glassfish/web/DirContextURLStreamHandlerService' stamp='102.031'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/ThreadLocal get ()Ljava/lang/Object;' witness='org/glassfish/web/admin/monitor/HttpServiceStatsProvider$1' stamp='103.059'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/ThreadLocal get ()Ljava/lang/Object;' witness='org/glassfish/web/admin/monitor/HttpServiceStatsProvider$1' stamp='103.059'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/ThreadLocal get ()Ljava/lang/Object;' witness='org/glassfish/web/admin/monitor/HttpServiceStatsProvider$1' stamp='103.059'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/ThreadLocal get ()Ljava/lang/Object;' witness='org/glassfish/web/admin/monitor/HttpServiceStatsProvider$1' stamp='103.059'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/ThreadLocal get ()Ljava/lang/Object;' witness='org/glassfish/web/admin/monitor/HttpServiceStatsProvider$1' stamp='103.060'/>
+<dependency_failed type='leaf_type' ctxk='java/util/logging/Level' witness='com/sun/enterprise/util/logging/IASLevel' stamp='103.480'/>
+<dependency_failed type='unique_concrete_method' x='java/util/Vector add (Ljava/lang/Object;)Z' witness='com/sun/enterprise/deployment/OrderedSet' stamp='105.927'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPackageAccess (Ljava/lang/String;)V' witness='com/sun/enterprise/security/J2EESecurityManager' stamp='111.769'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPropertyAccess (Ljava/lang/String;)V' witness='com/sun/enterprise/security/J2EESecurityManager' stamp='111.769'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPropertyAccess (Ljava/lang/String;)V' witness='com/sun/enterprise/security/J2EESecurityManager' stamp='111.769'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/Node' x='com/sun/org/apache/xerces/internal/dom/NodeImpl appendChild (Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;' witness='org/w3c/dom/Node' stamp='135.804'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/Node' x='com/sun/org/apache/xerces/internal/dom/NodeImpl appendChild (Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;' witness='org/w3c/dom/Node' stamp='135.804'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/Node' x='com/sun/org/apache/xerces/internal/dom/NodeImpl appendChild (Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;' witness='org/w3c/dom/Node' stamp='135.804'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/Node' x='com/sun/org/apache/xerces/internal/dom/NodeImpl appendChild (Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;' witness='org/w3c/dom/Node' stamp='135.804'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/NamedNodeMap' x='com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl getNamedItem (Ljava/lang/String;)Lorg/w3c/dom/Node;' witness='org/w3c/dom/NamedNodeMap' stamp='136.188'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/NamedNodeMap' x='com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl getLength ()I' witness='org/w3c/dom/NamedNodeMap' stamp='136.188'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/w3c/dom/NamedNodeMap' x='com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl getLength ()I' witness='org/w3c/dom/NamedNodeMap' stamp='136.188'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.456'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.457'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.457'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.457'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.457'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.457'/>
+<dependency_failed type='leaf_type' ctxk='com/sun/org/apache/xerces/internal/xni/QName' witness='com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV$XQName' stamp='136.457'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Date' witness='java/sql/Date' stamp='142.042'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Date' witness='java/sql/Date' stamp='142.042'/>
+<dependency_failed type='unique_concrete_method' x='java/util/Date getTime ()J' witness='java/sql/Timestamp' stamp='142.064'/>
+<writer thread='1924'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/Throwable fillInStackTrace ()Ljava/lang/Throwable;' witness='com/sun/jsftemplating/layout/ProcessingCompleteException' stamp='150.071'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/Throwable fillInStackTrace ()Ljava/lang/Throwable;' witness='com/sun/jsftemplating/layout/ProcessingCompleteException' stamp='150.071'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/Throwable fillInStackTrace ()Ljava/lang/Throwable;' witness='com/sun/jsftemplating/layout/ProcessingCompleteException' stamp='150.072'/>
+<writer thread='4936'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.238'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.239'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.239'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.239'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.239'/>
+<dependency_failed type='unique_concrete_method' x='java/lang/SecurityManager checkPermission (Ljava/security/Permission;)V' witness='org/glassfish/appclient/server/core/jws/servedcontent/ASJarSigner$NoExitSecurityManager' stamp='157.239'/>
+<writer thread='1924'/>
+<dependency_failed type='leaf_type' ctxk='java/util/concurrent/ConcurrentHashMap' witness='com/sun/el/lang/ExpressionBuilder$1' stamp='158.438'/>
+<dependency_failed type='unique_concrete_method' ctxk='java/util/concurrent/ConcurrentMap' x='java/util/concurrent/ConcurrentHashMap putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' witness='com/sun/el/lang/ExpressionBuilder$1' stamp='158.438'/>
+<dependency_failed type='unique_concrete_method' ctxk='java/util/concurrent/ConcurrentMap' x='java/util/concurrent/ConcurrentHashMap putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' witness='com/sun/el/lang/ExpressionBuilder$1' stamp='158.439'/>
+<dependency_failed type='unique_concrete_method' x='java/util/AbstractList listIterator ()Ljava/util/ListIterator;' witness='javax/faces/component/UIComponentBase$ChildrenList' stamp='159.838'/>
+<writer thread='2348'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.759'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.759'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<dependency_failed type='leaf_type' ctxk='java/util/Stack' witness='sun/net/www/http/ClientVector' stamp='245.760'/>
+<writer thread='1924'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/objectweb/asm/ClassVisitor' x='org/glassfish/deployment/common/NodeInfo visit (IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V' witness='org/objectweb/asm/ClassVisitor' stamp='397.004'/>
+<dependency_failed type='unique_concrete_method' x='sun/nio/ch/NativeDispatcher pread (Ljava/io/FileDescriptor;JIJLjava/lang/Object;)I' witness='sun/nio/ch/FileDispatcher' stamp='412.173'/>
+<dependency_failed type='unique_concrete_method' ctxk='com/sun/enterprise/deployment/annotation/introspection/AnnotationScanner' x='com/sun/enterprise/deployment/annotation/introspection/DefaultAnnotationScanner isAnnotation (Ljava/lang/String;)Z' witness='com/sun/enterprise/deployment/annotation/introspection/AnnotationScanner' stamp='422.321'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/glassfish/api/invocation/RegisteredComponentInvocationHandler' x='com/sun/web/security/WebSecurityComponentInvocationHandler getComponentInvocationHandler ()Lorg/glassfish/api/invocation/ComponentInvocationHandler;' witness='org/glassfish/api/invocation/RegisteredComponentInvocationHandler' stamp='433.592'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/glassfish/api/invocation/RegisteredComponentInvocationHandler' x='com/sun/web/security/WebSecurityComponentInvocationHandler getComponentInvocationHandler ()Lorg/glassfish/api/invocation/ComponentInvocationHandler;' witness='org/glassfish/api/invocation/RegisteredComponentInvocationHandler' stamp='433.592'/>
+<writer thread='768'/>
+<dependency_failed type='unique_concrete_method' x='java/io/ByteArrayOutputStream reset ()V' witness='com/sun/net/ssl/internal/ssl/OutputRecord' stamp='446.248'/>
+<writer thread='1924'/>
+<dependency_failed type='unique_concrete_method' x='javax/faces/component/UIComponentBase getFacetsAndChildren ()Ljava/util/Iterator;' witness='com/sun/faces/facelets/compiler/UILeaf' stamp='459.906'/>
+<dependency_failed type='unique_concrete_method' x='javax/faces/component/UIComponentBase getFacetsAndChildren ()Ljava/util/Iterator;' witness='com/sun/faces/

@@ -1,0 +1,205 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.glassfish.scripting</groupId>
+    <artifactId>jruby-monitor</artifactId>
+    <version>1.5.11</version>
+    <packaging>hk2-jar</packaging>
+    <name>JRuby monitoring probe</name>
+    <description>JRuby monitoring probe for GlassFish v3</description>
+
+    <scm>
+        <connection>scm:svn:https://svn.dev.java.net/svn/glassfish-scripting/tags/jruby-monitor-1.5.11</connection>
+        <developerConnection>scm:svn:https://svn.dev.java.net/svn/glassfish-scripting/tags/jruby-monitor-1.5.11
+        </developerConnection>
+    </scm>
+
+
+    <build>
+        <plugins>
+            <!-- Configure maven-bundle-plugin to generate OSGi manifest.
+                                Please note: we use the manifest goal only and not the bundle goal.
+                                 The bundle goal can lead to very surprising results if the
+                                 package names are not correctly specified. So,
+                                 we use the jar plugin to generate the jar.-->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>1.4.3</version>
+                <configuration>
+                    <!-- Since, we are in a top level pom and
+                                          we we don't want it to be active for plain jar type artifacts,
+                                          enable the plugin for hk2-jar and bundle packaging type only,
+                                     -->
+                    <supportedProjectTypes>
+                        <supportedProjectType>hk2-jar</supportedProjectType>
+                        <supportedProjectType>bundle</supportedProjectType>
+                    </supportedProjectTypes>
+                    <instructions>
+                        <!-- Read all the configuration from osgi.bundle file, if it exists.
+                                               See Felix-699 to find out why we use ${basedir}.
+                                          -->
+                        <_include>-${basedir}/osgi.bundle</_include>
+                    </instructions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.sun.enterprise</groupId>
+                <artifactId>hk2-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <archive>
+                        <!-- Use the manifest.mf produced by maven-bundle-plugin:manifest -->
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                        <manifestEntries>
+                            <probe-provider-class-names>
+                                org.glassfish.scripting.jruby.monitor.JRubyHttpProbeProvider,org.glassfish.scripting.jruby.monitor.JRubyProbeProvider,org.glassfish.scripting.jruby.monitor.JRubyRuntimePoolProvider
+                            </probe-provider-class-names>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.0-beta-8</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.admin</groupId>
+            <artifactId>config-api</artifactId>
+            <version>3.0-b71</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.enterprise</groupId>
+            <artifactId>hk2</artifactId>
+            <version>0.4.13</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.external</groupId>
+            <artifactId>management-api</artifactId>
+            <version>3.0.0-b011</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.gmbal</groupId>
+            <artifactId>gmbal-api-only</artifactId>
+            <version>3.0.0-b022</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <developers>
+        <developer>
+            <id>vivekp</id>
+            <name>Vivek Pandey</name>
+            <url>http://weblogs.java.net/blog/vivekp/</url>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>lead</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <repositories>
+        <repository>
+            <id>glassfish-repository</id>
+            <name>Java.net Repository for Glassfish</name>
+            <url>http://download.java.net/maven/glassfish</url>
+            <snapshots>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <!-- back up glassfish maven repository in case the 'glassfish-repository' goes down -->
+            <id>glassfish-repository-wsinterop</id>
+            <name>Java.net Repository for Glassfish</name>
+            <url>http://maven.dyndns.org/glassfish/</url>
+            <snapshots>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>java.net2</id>
+            <name>Java.net Maven2 Repository</name>
+            <url>http://download.java.net/maven/2</url>
+        </repository>
+
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>glassfish-repository</id>
+            <name>Java.net Repository for Maven 2</name>
+            <url>http://download.java.net/maven/glassfish</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>maven2.java.net</id>
+            <name>Java.net Repository for Maven 2</name>
+            <url>http://download.java.net/maven/2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <!-- the ID maps to ~/.m2/settings.xml, so don't change the ID -->
+            <id>rator.sfbay</id>
+            <url>dav:http://glassfish-maven-repository.sfbay/maven/repositories/glassfish/</url>
+        </repository>
+    </distributionManagement>
+    <licenses>
+        <license>
+            <distribution>repo</distribution>
+            <name>CDDL and GPLv2 w/ classpath execption dual license</name>
+            <url>https://glassfish.dev.java.net/public/CDDL+GPL.html</url>
+        </license>
+    </licenses>
+
+</project>

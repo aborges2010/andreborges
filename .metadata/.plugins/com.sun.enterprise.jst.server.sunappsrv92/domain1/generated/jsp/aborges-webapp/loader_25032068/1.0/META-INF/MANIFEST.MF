@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.2
+Created-By: 1.4.2-b28 (Sun Microsystems Inc.)
+Specification-Title: Java Architecture for XML Binding
+Specification-Version: 1.0
+Specification-Vendor: Sun Microsystems, Inc.
+Implementation-Title: JAXB Reference Implementation 
+Implementation-Version: 1.0.4
+Implementation-Vendor: Sun Microsystems, Inc.
+Implementation-Vendor-Id: com.sun
+Extension-Name: com.sun.tools.xjc
+Main-Class: com.sun.tools.xjc.Driver
+Class-Path: jaxb-api.jar jaxb-impl.jar jaxb-libs.jar sax.jar dom.jar j
+ axp-api.jar xercesImpl.jar xalan.jar jax-qname.jar namespace.jar xsdl
+ ib.jar relaxngDatatype.jar dom4j.jar
+

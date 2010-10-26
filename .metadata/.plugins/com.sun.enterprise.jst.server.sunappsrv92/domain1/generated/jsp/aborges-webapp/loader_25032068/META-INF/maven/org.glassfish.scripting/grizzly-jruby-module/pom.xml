@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.glassfish.scripting</groupId>
+        <artifactId>rails</artifactId>
+        <version>1.0-b17</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>grizzly-jruby-module</artifactId>
+    <packaging>hk2-jar</packaging>
+    <name>JRuby container and deployer</name>
+    <description>JRuby container and deployer for GlassFish v3</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeArtifactIds>jruby-monitor,jruby-commons</includeArtifactIds>
+                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <developers>
+        <developer>
+            <id>vivekp</id>
+            <name>Vivek Pandey</name>
+            <url>http://weblogs.java.net/blog/vivekp/</url>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>lead</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+
+        <developer>
+            <id>pramodgo</id>
+            <name>Pramod Gopinath</name>
+            <url>http://blogs.sun.com/pramodg</url>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>dochez</id>
+            <name>Jerome Dochez</name>
+            <url>http://blogs.sun.com/dochez</url>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>takai</id>
+            <name>Naoto Takai</name>
+            <url>http://recompile.net/</url>
+            <organization>Recompile.net</organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <!-- author of this pom.xml to a certain extent -->
+            <id>ss141213</id>
+            <name>Sahoo</name>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.enterprise</groupId>
+            <artifactId>hk2</artifactId>
+            <version>${hk2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.common</groupId>
+            <artifactId>glassfish-api</artifactId>
+            <version>${glassfish.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.grizzly</groupId>
+            <artifactId>grizzly-http</artifactId>
+            <version>${grizzly.original-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.grizzly</groupId>
+            <artifactId>grizzly-jruby</artifactId>
+            <version>${grizzly.jruby.adapter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.scripting</groupId>
+            <artifactId>jruby-monitor</artifactId>
+            <version>${jruby-monitor.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.scripting</groupId>
+            <artifactId>jruby-commons</artifactId>
+            <version>${jruby-common.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.admin</groupId>
+            <artifactId>config-api</artifactId>
+            <version>${glassfish.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <licenses>
+        <license>
+            <distribution>repo</distribution>
+            <name>CDDL and GPLv2 w/ classpath execption dual license</name>
+            <url>https://glassfish.dev.java.net/public/CDDL+GPL.html</url>
+        </license>
+    </licenses>
+</project>

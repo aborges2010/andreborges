@@ -1,0 +1,206 @@
+
+asadmin Utility Subcommands          configure-jruby-container(1)
+
+NAME
+     configure-jruby-container - configures the Enterprise Server
+     JRuby container
+
+SYNOPSIS
+     configure-jruby-container [--help]
+     [--monitoring={false|true}]
+     [--jruby-home jruby-home]
+     [--jruby-runtime jruby-runtime]
+     [--jruby-runtime-min jruby-runtime-min]
+     [--jruby-runtime-max jruby-runtime-max]
+     [--show={true|false}]
+
+DESCRIPTION
+     The  configure-jruby-container  subcommand  configures   the
+     JRuby  container  of Sun GlassFishTM Enterprise Server. This
+     subcommand also shows the current settings of the Enterprise
+     Server JRuby container.
+
+     The Enterprise Server JRuby container enables JRuby applica-
+     tions to be deployed in Enterprise Server.
+
+     JRuby is an implementation of the Ruby programming  language
+     in  the  JavaTM language. JRuby consists of the JRuby inter-
+     preter, the Ruby library, and Ruby gems. JRuby is  available
+     from   Update   Tool   or  from  the  JRuby  community  site
+     (http://jruby.org).
+
+     The Enterprise Server JRuby container maintains  a  pool  of
+     JRuby  runtime  instances for use by JRuby applications. The
+     configure-jruby-container subcommand enables you to set  the
+     initial  size,  minimum size, and maximum size of this pool.
+     The minimum size must be greater than zero. The initial size
+     must  be  greater than or equal to the minimum size and less
+     than or equal to the maximum size.
+
+     This subcommand is supported in remote mode only.
+
+OPTIONS
+     --help
+     -?
+
+         Displays the help text for the subcommand.
+
+     --monitoring
+         If set to true, enables monitoring  for  the  Enterprise
+
+Java EE 6           Last change: 30 Oct 2009                    1
+
+asadmin Utility Subcommands          configure-jruby-container(1)
+
+         Server JRuby container. The default is false.
+
+     --jruby-home
+
+         The directory where JRuby  itself  (not  the  Enterprise
+         Server JRuby container) is installed.
+
+         The directory must exist. Otherwise,  an  error  occurs.
+         However,  the subcommand does not check whether JRuby is
+         installed in the directory.
+
+         The default is as-install/jruby, which is the  directory
+         where  Update  Tool  installs  JRuby.  Therefore, if you
+         obtained JRuby from Update  Tool,  this  option  is  not
+         required.
+
+     --jruby-runtime
+         The initial number of JRuby  runtime  instances  in  the
+         pool.
+
+         This number must be greater than zero, greater  than  or
+         equal  to --jruby-runtime-min, and less than or equal to
+         --jruby-runtime-max.
+
+         The default is 1.
+
+     --jruby-runtime-min
+
+         The minimum number of JRuby  runtime  instances  in  the
+         pool.
+
+         This number must be greater than zero, and less than  or
+         equal to --jruby-runtime and --jruby-runtime-max.
+
+         The default is 1.
+
+     --jruby-runtime-max
+         The maximum number of JRuby  runtime  instances  in  the
+         pool.
+
+         This number must be greater than zero, and greater  than
+         or equal to --jruby-runtime and --jruby-runtime-min.
+
+         The default is 1.
+
+     --show
+
+         If set to true, displays the  current  settings  of  the
+
+Java EE 6           Last change: 30 Oct 2009                    2
+
+asadmin Utility Subcommands          configure-jruby-container(1)
+
+         Enterprise Server JRuby container. The default is true.
+
+EXAMPLES
+     Example 1 Setting the Directory Where JRuby Is Installed
+
+     This example sets the directory where JRuby is installed  to
+     /tools/jruby.
+
+       asadmin> configure-jruby-container --jruby-home=/tools/jruby
+       Successfully updated jruby-home to the new value: /tools/jruby
+
+       Current JRuby Container configuration:
+       jruby-home=/tools/jruby
+       max-pool-size=1
+       initial-pool-size=1
+       min-pool-size=1
+       monitoring=false
+
+       Command configure-jruby-container executed successfully.
+
+     Example 2 Configuring the JRuby Runtime Pool
+
+     This example configures the JRuby runtime pool as follows:
+
+         o    The initial number of JRuby  runtime  instances  in
+              the pool is 3.
+
+         o    The minimum number of JRuby  runtime  instances  in
+              the pool is 2.
+
+         o    The maximum number of JRuby  runtime  instances  in
+              the pool is 5.
+
+     The current settings of the  Enterprise  Server  JRuby  Con-
+     tainer are not displayed.
+
+       asadmin> configure-jruby-container --show=false
+       --jruby-runtime=3
+       --jruby-runtime-min=2
+       --jruby-runtime-max=5
+       Successfully updated JRuby runtime pool configuration. Updated values are,
+       jruby-runtime: 3, jruby-runtime-min: 2, jruby-runtime-max: 5
+
+Java EE 6           Last change: 30 Oct 2009                    3
+
+asadmin Utility Subcommands          configure-jruby-container(1)
+
+       Command configure-jruby-container executed successfully.
+
+     Example 3 Displaying the Current Settings of the  Enterprise
+     Server JRuby Container
+
+     This command displays the current settings of an  Enterprise
+     Server JRuby container that is configured as follows:
+
+         o    The  directory  where   JRuby   is   installed   is
+              /tools/jruby.
+
+         o    The initial number of JRuby  runtime  instances  in
+              the pool is 3.
+
+         o    The minimum number of JRuby  runtime  instances  in
+              the pool is 2.
+
+         o    The maximum number of JRuby  runtime  instances  in
+              the pool is 5.
+
+         o    Monitoring for the  Enterprise  Server  JRuby  Con-
+              tainer is not enabled.
+
+       asadmin> configure-jruby-container --show=true
+       Current JRuby Container configuration:
+       jruby-home=/tools/jruby
+       min-pool-size=2
+       initial-pool-size=3
+       max-pool-size=5
+       monitoring=false
+
+       Command configure-jruby-container executed successfully.
+
+EXIT STATUS
+     0                           command executed successfully
+
+     1                           error in executing the command
+
+SEE ALSO
+     asadmin(1M)
+
+     Chapter 1, Using JRuby on Rails With  Sun  GlassFish  Enter-
+     prise   Server,   in  Sun  GlassFish  Enterprise  Server  v3 
+
+Java EE 6           Last change: 30 Oct 2009                    4
+
+asadmin Utility Subcommands          configure-jruby-container(1)
+
+     Scripting Framework Guide
+
+Java EE 6           Last change: 30 Oct 2009                    5
+

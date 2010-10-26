@@ -1,0 +1,3 @@
+com.sun.jersey.server.impl.container.servlet.JerseyServletContainerInitializer
+com.sun.faces.config.FacesInitializer
+org.apache.jasper.runtime.TldScanner

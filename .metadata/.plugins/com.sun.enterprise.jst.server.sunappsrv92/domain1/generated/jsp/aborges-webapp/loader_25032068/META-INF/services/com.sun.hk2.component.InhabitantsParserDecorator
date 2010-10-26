@@ -1,0 +1,5 @@
+org.glassfish.kernel.embedded.EmbeddedInhabitantsParser
+
+org.glassfish.admin.rest.EmbeddedInhabitantsParser
+
+org.glassfish.web.embed.impl.EmbeddedDecorator

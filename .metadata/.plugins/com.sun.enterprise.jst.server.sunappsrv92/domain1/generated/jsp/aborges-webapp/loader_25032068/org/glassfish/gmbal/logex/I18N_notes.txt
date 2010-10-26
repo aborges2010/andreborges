@@ -1,0 +1,18 @@
+We need to generate resource files for the exceptions.
+Probably the best way to do this is to map the
+ID to the message:
+
+GMBAL101 = "Required type is {0}"
+
+This requires some changes:
+
+1. Every message must have an ID.  currently only log messages have IDs
+   This means moving the ID field from @Log to @Message.
+2. The basic processing should stay the same:
+    - Return type of String: cannot return an exception or generate one, but
+      will return a formatted I18N message.
+    - Return type of an Exception: will generate exception
+    - Return type of void: may log (if @Log present), otherwise useless.
+    - A log is generated only if @Log
+3. We can build a simple scanner that takes as arguments the names of the classes
+   to scan for annotated methods.

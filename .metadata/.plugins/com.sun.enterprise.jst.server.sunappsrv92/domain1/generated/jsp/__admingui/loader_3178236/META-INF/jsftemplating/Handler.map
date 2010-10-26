@@ -1,0 +1,371 @@
+
+#  Returns the list of monitorable components of an application
+populateComponentDropDown.class=org.glassfish.admingui.handlers.WoodstockHandler
+populateComponentDropDown.method=populateComponentDropDown
+populateComponentDropDown.input[0].name=VSList
+populateComponentDropDown.input[0].type=java.util.List
+populateComponentDropDown.input[0].required=true
+populateComponentDropDown.input[1].name=AppName
+populateComponentDropDown.input[1].type=java.lang.String
+populateComponentDropDown.input[1].required=true
+populateComponentDropDown.output[0].name=ComponentList
+populateComponentDropDown.output[0].type=[Lcom.sun.webui.jsf.model.Option;
+
+StringArrayToSelectItemArray.class=org.glassfish.admingui.handlers.WoodstockHandler
+StringArrayToSelectItemArray.method=StringArrayToSelectItemArray
+StringArrayToSelectItemArray.input[0].name=stringArray
+StringArrayToSelectItemArray.input[0].type=[Ljava.lang.String;
+StringArrayToSelectItemArray.input[0].required=true
+StringArrayToSelectItemArray.output[0].name=item
+StringArrayToSelectItemArray.output[0].type=[Ljavax.faces.model.SelectItem;
+
+#  This handler returns the properties to be removed and added.
+getAddRemoveProps.class=org.glassfish.admingui.handlers.TableHandlers
+getAddRemoveProps.method=getAddRemoveProps
+getAddRemoveProps.input[0].name=NewList
+getAddRemoveProps.input[0].type=java.util.List
+getAddRemoveProps.input[0].required=true
+getAddRemoveProps.input[1].name=OldList
+getAddRemoveProps.input[1].type=java.util.Map
+getAddRemoveProps.input[1].required=true
+getAddRemoveProps.input[2].name=NameList
+getAddRemoveProps.input[2].type=java.util.ArrayList
+getAddRemoveProps.input[2].required=true
+getAddRemoveProps.output[0].name=AddProps
+getAddRemoveProps.output[0].type=java.util.Map
+getAddRemoveProps.output[1].name=RemoveProps
+getAddRemoveProps.output[1].type=java.util.ArrayList
+
+setShowRegTreeNode.class=org.glassfish.admingui.registration.RegisterHandlers
+setShowRegTreeNode.method=testIfRegistered
+
+#  This handler enable or disable the table text field according to the method value.
+setDisableConnectionPoolTableField.class=org.glassfish.admingui.handlers.WoodstockHandler
+setDisableConnectionPoolTableField.method=setDisableConnectionPoolTableField
+setDisableConnectionPoolTableField.input[0].name=tableDD
+setDisableConnectionPoolTableField.input[0].type=com.sun.webui.jsf.component.DropDown
+setDisableConnectionPoolTableField.input[1].name=validationField
+setDisableConnectionPoolTableField.input[1].type=com.sun.webui.jsf.component.Field
+setDisableConnectionPoolTableField.input[2].name=methodValue
+setDisableConnectionPoolTableField.input[2].type=java.lang.String
+
+#  This handler converts the table List to a Property map.
+convertRowsToProperties.class=org.glassfish.admingui.handlers.TableHandlers
+convertRowsToProperties.method=convertRowsToProperties
+convertRowsToProperties.input[0].name=NewList
+convertRowsToProperties.input[0].type=java.util.List
+convertRowsToProperties.input[0].required=true
+convertRowsToProperties.output[0].name=AddProps
+convertRowsToProperties.output[0].type=java.util.Map
+
+getProductInstanceURN.class=org.glassfish.admingui.registration.RegisterHandlers
+getProductInstanceURN.method=getProductInstanceURN
+
+#  This handler looks at the input TableRowGroup, checks which row is selected, and returns a list of the Map. 
+#    Each Map corresponding to one single row of the table.  
+#    This method only works for the table where each row consists of one single map since it only looks at the
+#    first element that is returned by the getObject() method of MultipleListDataProvider.
+#  
+#    Input  value: "TableRowGroup" -- Type:  com.sun.webui.jsf.component.TableRowGroup
+#    Input  value: "selectedRows" -- Type:  java.util.List
+getSelectedSingleMapRows.class=org.glassfish.admingui.handlers.TableHandlers
+getSelectedSingleMapRows.method=getSelectedSingleMapRows
+getSelectedSingleMapRows.input[0].name=TableRowGroup
+getSelectedSingleMapRows.input[0].type=com.sun.webui.jsf.component.TableRowGroup
+getSelectedSingleMapRows.input[0].required=true
+getSelectedSingleMapRows.output[0].name=selectedRows
+getSelectedSingleMapRows.output[0].type=java.util.List
+
+#  Returns the list of monitorable resource components
+populateResourceMonitorDropDown.class=org.glassfish.admingui.handlers.WoodstockHandler
+populateResourceMonitorDropDown.method=populateResourceMonitorDropDown
+populateResourceMonitorDropDown.input[0].name=ResourceList
+populateResourceMonitorDropDown.input[0].type=java.util.List
+populateResourceMonitorDropDown.input[0].required=true
+populateResourceMonitorDropDown.output[0].name=MonitorList
+populateResourceMonitorDropDown.output[0].type=[Lcom.sun.webui.jsf.model.Option;
+populateResourceMonitorDropDown.output[1].name=FirstItem
+populateResourceMonitorDropDown.output[1].type=java.lang.String
+
+#  This handler adds one row to  table
+#    Input  value: "TableRowGroup" -- Type:  com.sun.webui.jsf.component.TableRowGroup
+#    Input value: "NameList" -- Type:java.util.List
+#    Input value: "DefaultValueList" -- Type:java.util.List
+#    Input value: "HasSelected" -- Type:java.lang.Boolean
+addRowToTable.class=org.glassfish.admingui.handlers.TableHandlers
+addRowToTable.method=addRowToTable
+addRowToTable.input[0].name=TableRowGroup
+addRowToTable.input[0].type=com.sun.webui.jsf.component.TableRowGroup
+addRowToTable.input[0].required=true
+addRowToTable.input[1].name=NameList
+addRowToTable.input[1].type=java.util.List
+addRowToTable.input[2].name=HasSelected
+addRowToTable.input[2].type=java.lang.Boolean
+addRowToTable.input[3].name=DefaultValueList
+addRowToTable.input[3].type=java.util.List
+
+getCountryListForRegistration.class=org.glassfish.admingui.registration.RegisterHandlers
+getCountryListForRegistration.method=getCountryListForRegistration
+getCountryListForRegistration.output[0].name=labels
+getCountryListForRegistration.output[0].type=java.util.List
+getCountryListForRegistration.output[1].name=values
+getCountryListForRegistration.output[1].type=java.util.List
+
+#  This handler set the Registration Status to Remind Later 
+setRegistrationRemindLater.class=org.glassfish.admingui.registration.RegisterHandlers
+setRegistrationRemindLater.method=setRegistrationRemindLater
+
+#  This handler will be called only when user open version window in order to mimize impact to the rest of program.
+#  Also need to define html.adaptor.port for the port number.
+initHtmlAdaptor.class=org.glassfish.admingui.handlers.HtmlAdaptorHandler
+initHtmlAdaptor.method=initHtmlAdaptor
+
+#  This method uploads a file temp directory
+# 	 Input value: "file" -- Type: com.sun.webui.jsf.model.UploadedFile
+# 	 Output value: "uploadDir" -- Type: java.lang.String
+uploadFileToTempDir.class=org.glassfish.admingui.handlers.WoodstockHandler
+uploadFileToTempDir.method=uploadFileToTempDir
+uploadFileToTempDir.input[0].name=file
+uploadFileToTempDir.input[0].type=com.sun.webui.jsf.model.UploadedFile
+uploadFileToTempDir.output[0].name=origPath
+uploadFileToTempDir.output[0].type=java.lang.String
+uploadFileToTempDir.output[1].name=uploadedTempFile
+uploadFileToTempDir.output[1].type=java.lang.String
+
+#  This method gets the themeName and themeVersion
+# 	    via Integration Point.  If more than one is provided
+# 	    the one with the lowest priority number will be used.
+# 	    This method should be invoked before the theme is
+# 	    accessed (for example on the initPage or beforeCreate of the login page).
+getThemeFromIntegrationPoints.class=org.glassfish.admingui.handlers.ThemeHandlers
+getThemeFromIntegrationPoints.method=getThemeFromIntegrationPoints
+getThemeFromIntegrationPoints.output[0].name=themeContext
+getThemeFromIntegrationPoints.output[0].type=com.sun.webui.theme.ThemeContext
+
+#  This handler takes TableRowGroup as input and returns a List of Map objects. 
+#    The List returned contains Map objects with each Map representing one single row.  
+#    This method only works for tables where each row consists of one single map 
+#  
+#    Input  value: "TableRowGroup" -- Type:  com.sun.webui.jsf.component.TableRowGroup
+#    Output  value: "Rows" -- Type:  java.util.List
+getAllSingleMapRows.class=org.glassfish.admingui.handlers.TableHandlers
+getAllSingleMapRows.method=getAllSingleMapRows
+getAllSingleMapRows.input[0].name=TableRowGroup
+getAllSingleMapRows.input[0].type=com.sun.webui.jsf.component.TableRowGroup
+getAllSingleMapRows.input[0].required=true
+getAllSingleMapRows.output[0].name=Rows
+getAllSingleMapRows.output[0].type=java.util.List
+
+#  This handler converts the table list to arraylist.
+convertListToArrayList.class=org.glassfish.admingui.handlers.TableHandlers
+convertListToArrayList.method=convertListToArrayList
+convertListToArrayList.input[0].name=TableList
+convertListToArrayList.input[0].type=java.util.List
+convertListToArrayList.input[0].required=true
+convertListToArrayList.input[1].name=Name
+convertListToArrayList.input[1].type=java.lang.String
+convertListToArrayList.output[0].name=NameList
+convertListToArrayList.output[0].type=java.util.ArrayList
+
+#  This handler commits the changes to a TableRowGroup's
+# 	    DataProvider.
+commitTableRowGroup.class=org.glassfish.admingui.handlers.TableHandlers
+commitTableRowGroup.method=commitTableRowGroup
+commitTableRowGroup.input[0].name=tableRowGroup
+commitTableRowGroup.input[0].type=com.sun.webui.jsf.component.TableRowGroup
+commitTableRowGroup.input[0].required=true
+
+#  This handler returns true if we should ask user to register  
+# 
+#    Output value: "askRegistration" -- Type: Boolean/
+askRegistration.class=org.glassfish.admingui.registration.RegisterHandlers
+askRegistration.method=askRegistration
+askRegistration.input[0].name=cookie
+askRegistration.input[0].type=java.lang.String
+askRegistration.input[1].name=thisSession
+askRegistration.input[1].type=java.lang.String
+askRegistration.output[0].name=askRegistration
+askRegistration.output[0].type=java.lang.Boolean
+
+StringToSelectItemArray.class=org.glassfish.admingui.handlers.WoodstockHandler
+StringToSelectItemArray.method=StringToSelectItemArray
+StringToSelectItemArray.input[0].name=string
+StringToSelectItemArray.input[0].type=java.lang.String
+StringToSelectItemArray.input[0].required=true
+StringToSelectItemArray.output[0].name=item
+StringToSelectItemArray.output[0].type=[Ljavax.faces.model.SelectItem;
+
+getSupportImages.class=org.glassfish.admingui.registration.RegisterHandlers
+getSupportImages.method=getSupportImages
+getSupportImages.input[0].name=count
+getSupportImages.input[0].type=java.lang.Integer
+getSupportImages.input[0].defaultValue=5
+getSupportImages.output[0].name=imageList
+getSupportImages.output[0].type=java.util.List
+
+#  Returns the date pattern for this calendar component.
+getDatePattern.class=org.glassfish.admingui.handlers.WoodstockHandler
+getDatePattern.method=getDatePattern
+getDatePattern.input[0].name=calendarComponent
+getDatePattern.input[0].type=com.sun.webui.jsf.component.Calendar
+getDatePattern.input[0].required=true
+getDatePattern.output[0].name=pattern
+getDatePattern.output[0].type=java.lang.String
+
+#  This handler returns the selected row keys.
+getSelectedTableRowKeys.class=org.glassfish.admingui.handlers.TableHandlers
+getSelectedTableRowKeys.method=getSelectedTableRowKeys
+getSelectedTableRowKeys.input[0].name=tableRowGroup
+getSelectedTableRowKeys.input[0].type=com.sun.webui.jsf.component.TableRowGroup
+getSelectedTableRowKeys.input[0].required=true
+getSelectedTableRowKeys.output[0].name=rowKeys
+getSelectedTableRowKeys.output[0].type=[Lcom.sun.data.provider.RowKey;
+
+#  This handler takes in a HashMap, the name-value pair being the Properties.
+#   It turns each name-value pair to one hashMap, representing one row of table data, 
+#   and returns the list of Map. 
+# 
+#    Input value: "Properties" -- Type: java.util.Map/
+#    Output value: "TableList" -- Type: java.util.List/
+getTableListFromProperties.class=org.glassfish.admingui.handlers.TableHandlers
+getTableListFromProperties.method=getTableListFromProperties
+getTableListFromProperties.input[0].name=Properties
+getTableListFromProperties.input[0].type=java.util.Map
+getTableListFromProperties.input[0].required=true
+getTableListFromProperties.output[0].name=TableList
+getTableListFromProperties.output[0].type=java.util.List
+
+selectItemArrayToStrArray.class=org.glassfish.admingui.handlers.WoodstockHandler
+selectItemArrayToStrArray.method=selectItemArrayToStrArray
+selectItemArrayToStrArray.input[0].name=item
+selectItemArrayToStrArray.input[0].type=[Ljavax.faces.model.SelectItem;
+selectItemArrayToStrArray.input[0].required=true
+selectItemArrayToStrArray.output[0].name=strAry
+selectItemArrayToStrArray.output[0].type=[Ljava.lang.String;
+
+#  This method initializes the theme using the given
+# 	    themeName and themeVersion.  If these
+# 	    values are not supplied, "suntheme" and "4.2" will be used
+# 	    respectively.  This method should be invoked before the theme is
+# 	    accessed (for example on the initPage or beforeCreate of the login
+# 	    page).
+getTheme.class=org.glassfish.admingui.handlers.ThemeHandlers
+getTheme.method=getTheme
+getTheme.input[0].name=themeName
+getTheme.input[0].type=java.lang.String
+getTheme.input[1].name=themeVersion
+getTheme.input[1].type=java.lang.String
+getTheme.output[0].name=themeContext
+getTheme.output[0].type=com.sun.webui.theme.ThemeContext
+
+registerAS.class=org.glassfish.admingui.registration.RegisterHandlers
+registerAS.method=registerAS
+registerAS.input[0].name=userName
+registerAS.input[0].type=java.lang.String
+registerAS.input[0].required=true
+registerAS.input[1].name=pswd
+registerAS.input[1].type=java.lang.String
+registerAS.input[1].required=true
+registerAS.input[2].name=proxy
+registerAS.input[2].type=java.lang.String
+registerAS.input[3].name=port
+registerAS.input[3].type=java.lang.String
+registerAS.input[4].name=emailAdr
+registerAS.input[4].type=java.lang.String
+registerAS.input[4].required=true
+registerAS.input[5].name=newPswd
+registerAS.input[5].type=java.lang.String
+registerAS.input[5].required=true
+registerAS.input[6].name=screenName
+registerAS.input[6].type=java.lang.String
+registerAS.input[7].name=firstName
+registerAS.input[7].type=java.lang.String
+registerAS.input[8].name=lastName
+registerAS.input[8].type=java.lang.String
+registerAS.input[9].name=companyName
+registerAS.input[9].type=java.lang.String
+registerAS.input[10].name=country
+registerAS.input[10].type=java.lang.String
+registerAS.input[10].required=true
+registerAS.input[11].name=accountStatus
+registerAS.input[11].type=java.lang.String
+registerAS.input[11].required=true
+registerAS.input[12].name=newProxy
+registerAS.input[12].type=java.lang.String
+registerAS.input[13].name=newPort
+registerAS.input[13].type=java.lang.String
+
+createHyperlinkArray.class=org.glassfish.admingui.handlers.WoodstockHandler
+createHyperlinkArray.method=createHyperlinkArray
+createHyperlinkArray.output[0].name=links
+createHyperlinkArray.output[0].type=[Lcom.sun.webui.jsf.component.Hyperlink;
+
+#  This handler deletes the given RowKeys.
+deleteTableRows.class=org.glassfish.admingui.handlers.TableHandlers
+deleteTableRows.method=deleteTableRows
+deleteTableRows.input[0].name=tableRowGroup
+deleteTableRows.input[0].type=com.sun.webui.jsf.component.TableRowGroup
+deleteTableRows.input[0].required=true
+deleteTableRows.input[1].name=rowKeys
+deleteTableRows.input[1].type=[Lcom.sun.data.provider.RowKey;
+deleteTableRows.input[1].required=true
+
+#  This handler set the Registration Status to Don't Ask 
+setRegistrationDontAsk.class=org.glassfish.admingui.registration.RegisterHandlers
+setRegistrationDontAsk.method=setRegistrationDontAsk
+
+#  Returns the list of monitorable application components
+populateApplicationsMonitorDropDown.class=org.glassfish.admingui.handlers.WoodstockHandler
+populateApplicationsMonitorDropDown.method=populateApplicationsMonitorDropDown
+populateApplicationsMonitorDropDown.input[0].name=AppsList
+populateApplicationsMonitorDropDown.input[0].type=java.util.List
+populateApplicationsMonitorDropDown.input[0].required=true
+populateApplicationsMonitorDropDown.output[0].name=MonitorList
+populateApplicationsMonitorDropDown.output[0].type=[Lcom.sun.webui.jsf.model.Option;
+populateApplicationsMonitorDropDown.output[1].name=FirstItem
+populateApplicationsMonitorDropDown.output[1].type=java.lang.String
+
+dummyHyperlinkArray.class=org.glassfish.admingui.handlers.WoodstockHandler
+dummyHyperlinkArray.method=dummyHyperlinkArray
+dummyHyperlinkArray.output[0].name=links
+dummyHyperlinkArray.output[0].type=[Lcom.sun.webui.jsf.component.Hyperlink;
+
+#  This handler test if registration related operation should be performed  
+# 
+#    Output value: "value" -- Type: Boolean/
+showRegistration.class=org.glassfish.admingui.registration.RegisterHandlers
+showRegistration.method=showRegistration
+showRegistration.output[0].name=value
+showRegistration.output[0].type=java.lang.Boolean
+
+#  This handler converts the table List to a Properties map.
+getProperties.class=org.glassfish.admingui.handlers.TableHandlers
+getProperties.method=getProperties
+getProperties.input[0].name=NewList
+getProperties.input[0].type=java.util.List
+getProperties.input[0].required=true
+getProperties.output[0].name=AddProps
+getProperties.output[0].type=java.util.Map
+
+#  Returns the list of monitorable server components
+populateServerMonitorDropDown.class=org.glassfish.admingui.handlers.WoodstockHandler
+populateServerMonitorDropDown.method=populateServerMonitorDropDown
+populateServerMonitorDropDown.input[0].name=VSList
+populateServerMonitorDropDown.input[0].type=java.util.List
+populateServerMonitorDropDown.input[0].required=true
+populateServerMonitorDropDown.input[1].name=GCList
+populateServerMonitorDropDown.input[1].type=java.util.List
+populateServerMonitorDropDown.input[1].required=true
+populateServerMonitorDropDown.input[2].name=NLList
+populateServerMonitorDropDown.input[2].type=java.util.List
+populateServerMonitorDropDown.input[2].required=true
+populateServerMonitorDropDown.input[3].name=ThreadSystemList
+populateServerMonitorDropDown.input[3].type=java.util.List
+populateServerMonitorDropDown.input[3].required=true
+populateServerMonitorDropDown.output[0].name=MonitorList
+populateServerMonitorDropDown.output[0].type=[Lcom.sun.webui.jsf.model.Option;
+
+getIssueQueryString.class=org.glassfish.admingui.registration.RegisterHandlers
+getIssueQueryString.method=getIssueQueryString
+getIssueQueryString.output[0].name=query
+getIssueQueryString.output[0].type=java.lang.String
