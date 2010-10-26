@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<servers>
-  <server auto-publish-setting="2" auto-publish-time="0" hostname="localhost" id="Bundled GlassFish v3 Java EE 6" name="Bundled GlassFish v3 Java EE 6" runtime-id="GlassFish v3 Java EE 6" server-type="com.sun.enterprise.jst.server.sunappsrv92" server-type-id="com.sun.enterprise.jst.server.sunappsrv92" start-timeout="240" stop-timeout="240" timestamp="0">
-    <map key="generic_server_instance_properties" sunappserver.adminname="admin" sunappserver.adminpassword="" sunappserver.adminserverportnumber="4860" sunappserver.domaindir="C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.sunappsrv92" sunappserver.domainname="domain1" sunappserver.keepSessions="true" sunappserver.sampledbdir="C:\workspaceGlassfish\.metadata\.plugins\com.sun.enterprise.jst.server.derbysample" sunappserver.serveraddress="localhost" sunappserver.serverportnumber="8084"/>
-  </server>
-</servers>
